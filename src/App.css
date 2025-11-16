@@ -1,0 +1,53 @@
+.smooth-underline {
+  position: relative;
+}
+
+.smooth-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-out;
+}
+
+.smooth-underline:hover::after,
+.smooth-underline:focus::after,
+.smooth-underline.active::after {
+  width: 100%;
+}
+
+/* Mobile submenu animation */
+.submenu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.submenu-container.open {
+  max-height: 500px;
+}
+
+.fluidImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: normal;
+  background-color: hsla(15,27.45%,20%, 0.44);
+  opacity: 1;
+}
+
+.hightImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: normal;
+  background-color: hsla(17, 9%, 55%, 0.44);
+  opacity: 1;
+}
